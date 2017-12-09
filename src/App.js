@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/App.css';
 import axios from 'axios';
 import { REDDIT_HOT_URL } from './constants';
 import PostList from './PostList';
@@ -34,8 +34,12 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Hot Posts!</h1>
         </header>
-        <PostList posts={this.state.pageOfItems} />
-        <Pagination items={this.state.posts} onChangePage={this.onChangePage} />
+        <section className="wrapper">
+          <PostList posts={this.state.pageOfItems} />
+        </section>
+        <section className="wrapper--center">
+          <Pagination items={this.state.posts} onChangePage={this.onChangePage} />
+        </section>
       </div>
     );
   }

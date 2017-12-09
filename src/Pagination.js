@@ -105,7 +105,6 @@ class Pagination extends React.Component {
     }
 
     return (
-      <div className="center">
         <div className="pagination">
           <a className={pager.currentPage === 1 ? 'disabled' : ''} onClick={() => this.setPage(pager.currentPage - 1)}>Previous</a>
           {pager.pages.map((page, index) =>
@@ -113,7 +112,6 @@ class Pagination extends React.Component {
           )}
           <a className={pager.currentPage === pager.totalPages ? 'disabled' : ''} onClick={() => this.setPage(pager.currentPage + 1)}>Next</a>
         </div>
-      </div>
     );
   }
 }
