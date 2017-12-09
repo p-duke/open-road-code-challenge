@@ -1,11 +1,45 @@
-.App {
-  text-align: center;
+* {margin: 0; padding: 0;}
+
+div {
+  margin: 20px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.post-preview {
+  list-style-type: none;
+  width: 100%;
 }
+
+.post-card {
+  padding: 10px;
+  overflow: auto;
+}
+
+/*.post-card:hover {*/
+  /*background: #eee;*/
+  /*cursor: pointer;*/
+/*}*/
+
+.post-card__title  {
+  font: bold 15px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.post-card__thumbnail {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+.post-card__score {
+  float: left;
+  border: 1px solid red;
+  color: #c6c6c6;
+  font-weight: bold;
+  font-size: 70px;
+}
+
+li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
 
 .App-header {
   background-color: #222;
@@ -22,3 +56,24 @@
   font-size: large;
 }
 
+.center {
+  text-align: center;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
