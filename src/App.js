@@ -11,7 +11,6 @@ class App extends Component {
     this.state = {
       posts: [],
       pageOfItems: [],
-      exampleItems: [],
     };
     this.onChangePage = this.onChangePage.bind(this);
   }
@@ -19,14 +18,13 @@ class App extends Component {
   componentDidMount() {
     axios.get(REDDIT_HOT_URL)
       .then(response => {
-        this.setState({ exampleItems: response.data.data.children });
+        this.setState({ posts: response.data.data.children });
       }).catch(err => {
         console.log(err);
       });
   }
 
   onChangePage(pageOfItems) {
-    // update state with new page of items
     this.setState({ pageOfItems: pageOfItems });
   }
 
@@ -37,7 +35,7 @@ class App extends Component {
           <h1 className="App-title">Hot Posts!</h1>
         </header>
         <PostList posts={this.state.pageOfItems} />
-        <Pagination items={this.state.exampleItems} onChangePage={this.onChangePage} />
+        <Pagination items={this.state.posts} onChangePage={this.onChangePage} />
       </div>
     );
   }
