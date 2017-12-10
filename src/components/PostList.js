@@ -7,9 +7,9 @@ const PostList = (props) => {
   return (
     <div>
       <ul className='post-preview'>
-        { posts 
+        { posts
             ? posts.map((post, key) => {
-              return <PostPreview key={key} post={post} />
+              return <PostPreview viewPost={props.viewPost} key={key} post={post} />
             })
             : <p>Loading...</p>
         }
