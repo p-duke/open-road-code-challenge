@@ -37,7 +37,9 @@ class Post extends Component {
 
           <div className="column-10">
             <h4 data-url={REDDIT_BASE_URL + post.permalink}>
-              {post.title}
+              <a href={REDDIT_BASE_URL + post.permalink}>
+                {post.title}
+              </a>
               <span className="post-preview__title-url"> ({post.domain})</span>
             </h4>
             <p className="post-preview__subtext"> submitted about {convertDate(post.created_utc)} by {post.author} to <a href={REDDIT_BASE_URL+post.subreddit_name_prefixed}> {post.subreddit_name_prefixed} </a> </p>
