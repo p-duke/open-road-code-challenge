@@ -1,3 +1,5 @@
+On the root page, you'll see the list of preview posts, five per page with a paginated section at the bottom. You can either click into the "title" of the post or the "comments" link to see the post and its nested comments. Once in a post comments section, you can view the original post by clicking the 'title' or go back to the list of posts. I enjoyed spending time thinking through how to build this application, especially when it came to creating the comments section. I hope you enjoy it! Thanks!
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 == README
