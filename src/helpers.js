@@ -1,5 +1,3 @@
-'use strict';
-
 export const convertDate = (dateCreated) => {
   const postDate = new Date(dateCreated * 1000);
   const now = new Date();
@@ -12,3 +10,8 @@ export const convertDate = (dateCreated) => {
 
   return `${roundedDiff} hours ago`;
 };
+
+export const convertScore = (score) => {
+  const newScore = parseFloat(score * 0.001).toFixed(1);
+  return `${newScore}k`;
+}

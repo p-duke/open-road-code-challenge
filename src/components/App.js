@@ -42,14 +42,13 @@ class App extends Component {
       }).catch(err => {
         console.log(err);
       });
-
   }
 
   render() {
     return (
       <div>
         <header className="header">
-          <img className="header__logo" src={redditLogo} alt="Reddit logo" />
+          <a href="/"><img className="header__logo" src={redditLogo} alt="Reddit logo" /></a>
           <p className="header__category">ALL</p>
           <label className="header__label header__tab--selected">hot</label>
         </header>
@@ -57,13 +56,10 @@ class App extends Component {
         { this.state.viewPost 
             ?  
             <Post postData={this.state.postData} />
-
             : 
             <div>
-              <section className="wrapper">
-                <PostList viewPost={this.viewPost} posts={this.state.pageOfItems} />
-              </section>
-              <section className="wrapper--center">
+              <PostList viewPost={this.viewPost} posts={this.state.pageOfItems} />
+              <section className="pagination-wrapper">
                 <Pagination items={this.state.posts} onChangePage={this.onChangePage} />
               </section>
             </div>
