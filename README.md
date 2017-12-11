@@ -18,8 +18,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 * navigate to http://localhost:3000 in web browser (I was using Chrome)
 
-I enjoyed spending time thinking through how to build this application, especially when it came to creating the comments section. I hope
-you enjoy it! Thanks!
+I was able to complete the criteria plus the comments bonus challenge. On the root page you will see the list of preview posts, five per page with a paginated section at the bottom.
+You can either click into the "title" of the post or the "comments" link to see the post and its nested comments. I enjoyed spending time thinking through how to build this application,
+ especially when it came to creating the comments section. I hope you enjoy it! Thanks!
 
-- Peter
+Best,
+Peter
 
