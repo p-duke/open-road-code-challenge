@@ -29,23 +29,29 @@ img {
   width: 100%;
   margin: 0 auto; }
 
-.wrapper--center {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center; }
-
 /*the rows*/
 /*the columns*/
 [class*='column-'] {
   float: left;
-  padding: 1em;
-  width: 100%;
+  padding: 5px;
+  width: 30%;
   min-height: 1px; }
 
 @media only screen and (min-width: 30em) {
+  /*add a rule to make sure any images used behave fluidly*/
+  img {
+    width: auto;
+    max-width: 100%;
+    height: auto !important; }
   .wrapper {
     width: 95%;
     max-width: 65em; }
+  /*the columns*/
+  [class*='column-'] {
+    float: left;
+    padding: 1em;
+    width: 100%;
+    min-height: 1px; }
   .column-1 {
     width: 8.33333%; }
   .column-2 {
@@ -74,7 +80,7 @@ img {
 .pagination {
   display: inline-block;
   text-align: center;
-  margin: 20px; }
+  margin: 10px 0px; }
 
 .pagination-wrapper {
   width: 100%;
@@ -95,6 +101,28 @@ img {
 
 .pagination a:hover:not(.active) {
   background-color: #ddd; }
+
+@media only screen and (min-width: 30em) {
+  .pagination {
+    display: inline-block;
+    text-align: center;
+    margin: 20px; }
+  .pagination-wrapper {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center; }
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    cursor: default; }
+  .pagination a.active {
+    background-color: #4682B4;
+    color: white; }
+  .pagination a:hover:not(.active) {
+    background-color: #ddd; } }
 
 .comment ul {
   border-left: 1px solid #E0E0E0; }
@@ -121,7 +149,8 @@ img {
 .header {
   background-color: #d8ecf3;
   border-top: 1px solid #ccc;
-  border-bottom: 1px solid #4682B4; }
+  border-bottom: 1px solid #4682B4;
+  margin-bottom: 10px; }
 
 .header__label {
   position: relative;
@@ -149,6 +178,9 @@ img {
   font-size: x-small;
   font-weight: bolder; }
 
+.post-preview {
+  padding: 0px; }
+
 .post-preview__subtext {
   margin: 5px 0px 5px;
   font-size: 12px; }
@@ -174,3 +206,37 @@ img {
 .post-preview__arrow {
   color: #c6c6c6;
   text-align: center; }
+
+.post-preview__back-button {
+  display: block;
+  margin: 10px 0px;
+  font-size: 12px; }
+
+@media only screen and (min-width: 30em) {
+  .post-preview {
+    padding-left: 40px; }
+  .post-preview__subtext {
+    margin: 5px 0px 5px;
+    font-size: 12px; }
+  .post-preview__comment {
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #696969; }
+  .post-preview__title-url {
+    font-weight: 400;
+    font-size: 12px;
+    color: #696969; }
+  .post-preview__score {
+    font-size: 600;
+    color: #A9A9A9;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center; }
+  .post-preview__arrow {
+    color: #c6c6c6;
+    text-align: center; }
+  .post-preview__back-button {
+    display: block;
+    margin: 10px 0px;
+    font-size: 12px; } }
