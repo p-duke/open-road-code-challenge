@@ -15,9 +15,9 @@ class Post extends Component {
 
   render() {
     const post = this.state.originalPost;
-    let comments = this.state.comments.map(comment => {
+    let comments = this.state.comments.map((comment, key) => {
       return (
-        <Comment comment={comment.data} children={
+        <Comment key={key} comment={comment.data} children={
           comment.data.replies ? comment.data.replies.data.children : null} 
         />
       );
@@ -37,13 +37,15 @@ class Post extends Component {
 
           <div className="column-10">
             <h4 data-url={REDDIT_BASE_URL + post.permalink}>
-                {post.title}
+              {post.title}
               <span className="post-preview__title-url"> ({post.domain})</span>
             </h4>
             <p className="post-preview__subtext"> submitted about {convertDate(post.created_utc)} by {post.author} to <a href={REDDIT_BASE_URL+post.subreddit_name_prefixed}> {post.subreddit_name_prefixed} </a> </p>
             <a className="post-preview__comment" href={REDDIT_BASE_URL + post.permalink}><p>{post.num_comments} comments</p></a>
+            <a className="post-preview__back-button" href="/">Back to posts</a>
           </div>
         </div>
+
         <div className="row">
           <div className="column-12 comment--underline">
             <h4>all {post.num_comments} comments</h4>

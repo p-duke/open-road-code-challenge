@@ -19,12 +19,6 @@ img {
   margin: 0 auto;
 }
 
-.wrapper--center {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
 /*the rows*/
 .wrapper,
 .row:after {
@@ -34,16 +28,31 @@ img {
 /*the columns*/
 [class*='column-'] {
   float: left;
-  padding: 1em;
-  width: 100%;
+  padding: 5px;
+  width: 30%;
   min-height: 1px;
 }
 
 @media #{$breakpoint-medium} {
 
+  /*add a rule to make sure any images used behave fluidly*/
+  img {
+    width: auto;
+    max-width: 100%;
+    height: auto !important;
+  }
+
   .wrapper {
     width: 95%;
     max-width: $grid-max-width;
+  }
+
+  /*the columns*/
+  [class*='column-'] {
+    float: left;
+    padding: 1em;
+    width: 100%;
+    min-height: 1px;
   }
 
   @for $i from 1 through $grid-columns {

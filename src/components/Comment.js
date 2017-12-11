@@ -6,15 +6,14 @@ class Comment extends Component {
     let childnodes = null;
 
     if (this.props.children) {
-      childnodes = this.props.children.map(childnode => {
+      childnodes = this.props.children.map((childnode, key) => {
         return (
-          <Comment comment={childnode.data} children={childnode.data.replies ? childnode.data.replies.data.children : null} />
+          <Comment key={key} comment={childnode.data} children={childnode.data.replies ? childnode.data.replies.data.children : null} />
         );
       });
     }
 
     if (!this.props.comment.body) {
-      console.log('empty');
       return (
         null
       );
