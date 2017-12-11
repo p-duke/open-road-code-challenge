@@ -15,7 +15,6 @@
 *:after,
 *:before {
   margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -74,7 +73,8 @@ img {
 
 .pagination {
   display: inline-block;
-  text-align: center; }
+  text-align: center;
+  margin: 20px; }
 
 .pagination a {
   color: black;
@@ -89,17 +89,33 @@ img {
 .pagination a:hover:not(.active) {
   background-color: #ddd; }
 
+.comment ul {
+  border-left: 1px solid #E0E0E0; }
+
+.comment li {
+  list-style: none; }
+
+.comment p {
+  margin-bottom: 10px; }
+
+.comment__post {
+  border-bottom: 1px solid #CCC; }
+
+.comment--underline {
+  border-bottom: 1px dotted #CCC; }
+
+.comment__topbar {
+  font-size: 0.75rem; }
+
+.comment__topbar--orange {
+  font-weight: bold;
+  color: #FF8C00; }
+
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #cce6ff;
+  height: 45px;
   padding: 20px;
-  color: white; }
+  color: #4682B4; }
 
 .App-title {
-  font-size: 1.5em; }
-
-.App-intro {
-  font-size: large; }
-
-.center {
-  text-align: center; }
+  font-size: 1rem; }

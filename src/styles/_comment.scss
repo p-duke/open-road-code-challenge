@@ -1,0 +1,31 @@
+.comment {
+  ul {
+    border-left: 1px solid #E0E0E0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.comment__post {
+  border-bottom: 1px solid #CCC;
+}
+
+.comment--underline {
+  border-bottom: 1px dotted #CCC;
+}
+
+.comment__topbar {
+  font-size: 0.75rem;
+}
+
+.comment__topbar--orange {
+  font-weight: bold;
+  color: #CC5500;
+}
+
