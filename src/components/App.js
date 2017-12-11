@@ -5,16 +5,18 @@ import { REDDIT_HOT_URL } from '../constants';
 import PostList from './PostList';
 import Pagination from './Pagination';
 import Post from './Post';
+import redditLogo from '../images/reddit-logo.png';
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {
       posts: [],
       pageOfItems: [],
       viewPost: false,
       postData: [],
     };
+
     this.onChangePage = this.onChangePage.bind(this);
     this.viewPost = this.viewPost.bind(this);
   }
@@ -46,12 +48,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header className="App-header">
-          <h1 className="App-title">Hot Posts!</h1>
+        <header className="header">
+          <img className="header__logo" src={redditLogo} alt="Reddit logo" />
+          <p className="header__category">ALL</p>
+          <label className="header__label header__tab--selected">hot</label>
         </header>
+
         { this.state.viewPost 
             ?  
-              <Post postData={this.state.postData} />
+            <Post postData={this.state.postData} />
 
             : 
             <div>

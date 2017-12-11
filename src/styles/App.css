@@ -109,7 +109,38 @@ img {
 
 .comment__topbar--orange {
   font-weight: bold;
+  color: #CC5500; }
+
+.header {
+  background-color: #d8ecf3;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #4682B4; }
+
+.header__label {
+  position: relative;
+  display: inline-block;
+  padding: 1px 6px 3px;
+  border: 1px solid #4682B4;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+  background-color: #fff;
+  margin-left: 1rem;
+  margin-top: 1rem; }
+
+.header__tab--selected {
   color: #FF8C00; }
+
+.header__logo {
+  margin: 10px 5px 5px; }
+
+.header__category {
+  position: absolute;
+  top: 35px;
+  left: 166px;
+  font-size: x-small;
+  font-weight: bolder; }
 
 .App-header {
   background-color: #cce6ff;
