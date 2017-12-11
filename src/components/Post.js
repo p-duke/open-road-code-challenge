@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Comment from './Comment';
 import missingImage from '../images/image-missing.jpg';
 import { REDDIT_BASE_URL } from '../constants';
-import { convertDate } from '../helpers';
+import { convertDate, convertScore } from '../helpers';
 
 class Post extends Component {
   constructor(props) {
@@ -26,19 +26,22 @@ class Post extends Component {
     return (
       <div className="wrapper">
         <div className="row comment__post">
+
           <div className="column-1">
-            <p>{post.score}</p>
+            <p className="post-preview__score" > {convertScore(post.score)}</p>
           </div>
+
           <div className="column-1">
             <img src={!post.thumbnail.includes('redditmedia') ? missingImage : post.thumbnail } alt={post.title} />
           </div>
+
           <div className="column-10">
             <h4 data-url={REDDIT_BASE_URL + post.permalink}>
                 {post.title}
-              <span>({post.domain})</span>
+              <span className="post-preview__title-url"> ({post.domain})</span>
             </h4>
-            <p> submitted about {convertDate(post.created_utc)} by {post.author} to <a href={REDDIT_BASE_URL+post.subreddit_name_prefixed}> {post.subreddit_name_prefixed} </a> </p>
-            <a href={REDDIT_BASE_URL + post.permalink}><p>{post.num_comments} comments</p></a>
+            <p className="post-preview__subtext"> submitted about {convertDate(post.created_utc)} by {post.author} to <a href={REDDIT_BASE_URL+post.subreddit_name_prefixed}> {post.subreddit_name_prefixed} </a> </p>
+            <a className="post-preview__comment" href={REDDIT_BASE_URL + post.permalink}><p>{post.num_comments} comments</p></a>
           </div>
         </div>
         <div className="row">
